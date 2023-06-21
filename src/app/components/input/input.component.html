@@ -1,0 +1,11 @@
+<!-- <input class="new-todo" placeholder="Type new todo" autofocus type="text" required #identificador/>
+<button  type="button" (click)="getInputValue(identificador.value)">TEST</button> -->
+
+<input class="new-todo"
+       placeholder="Type new todo" 
+       autofocus 
+       type="text" 
+       required 
+       [(ngModel)]="tarea" 
+       (keydown.enter)="saveValue()"
+/>

@@ -1,0 +1,16 @@
+<!-- This section should be hidden by default and shown when there are todos -->
+<section class="main">
+  <ul class="todo-list">
+      <li *ngFor="let task of listTasks"
+        [ngClass]="{'completed': task.completed === true, 'editing': task.id === idTask}">
+        <div class="view">
+          <input class="toggle" type="checkbox" [(ngModel)]="task.completed"
+            (ngModelChange)="handleChangeOfCompleted()" />
+          <label (dblclick)="handleDoubleClick(task)">{{task.title}}</label>
+          <button class="destroy" (click)="delete(task)"></button>
+        </div>
+        <input class="edit" type="text" autofocus [(ngModel)]="newValor" (keydown.enter)="saveValue(task)"
+          (keyup.escape)="handleEscapeKey()" />
+      </li>
+  </ul>
+</section>

@@ -177,7 +177,7 @@ body {
 .todo-list li {
   position: relative;
   font-size: 24px;
-  border-bottom: 1px solid #ededed;
+  /* border-bottom: 1px solid #ededed; */
   padding: 0rem 1rem;
 }
 
